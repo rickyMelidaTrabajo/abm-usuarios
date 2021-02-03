@@ -1,0 +1,25 @@
+<!Doctype html>
+<html lang='es'>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/base_template.css">
+		<title>ABM de Usuarios: {subtitulo}</title>
+	</head>
+	<body>
+		<div id="cabecera">
+			<h1>Administrador de Usuarios</h1>
+			<h2>{subtitulo}</h2>
+		</div>
+		<div id="menu">
+			<a href="/abm-usuarios/{VIEW_SET_USER}" title="Nuevo usuario">Agregar Usuario </a>
+			<a href="/abm-usuarios/{VIEW_GET_USER}" title="Buscar usuario">Buscar/editar usuario</a>
+			<a href="/abm-usuarios/{VIEW_DELETE_USER}" title="Borrar usuario">Borrar usuario</a>
+		</div>
+		<div id="mensaje">
+			{mensaje}
+		</div>
+		<div id="formulario">
+			{formulario}
+		</div>
+	</body>
+</html>	

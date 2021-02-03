@@ -7,6 +7,7 @@
 		protected $query;
 		protected $rows = array();
 		private $conn;
+		public $mensaje = 'Hecho';
 
 		# Metodos abstractos para ABM de clases que hereden
 		abstract protected function get();
@@ -29,9 +30,13 @@
 
 		#Ejecutar un query simple del tipo INSERT, DELETE, UPDATE
 		protected function execute_single_query() {
-			$this->open_connection();
-			$this->conn->query($this->query);
-			$this->close_connection();
+			if($_POST) {
+				$this->open_connection();
+				$this->conn->query($this->query);
+				$this->close_connection();
+			} else {
+				$this->mensaje = 'Metodo no permitido';
+			}
 		}
 
 		#Traer resultados de una consulta en un Array
